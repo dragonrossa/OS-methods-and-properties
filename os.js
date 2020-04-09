@@ -21,6 +21,7 @@ var signals = os.constants.signals;
 var errors = os.constants.errno;
 var priority = os.constants.priority;
 
+
 console.log(`Name of host: ${osObject}`)
 console.log(`Total memory: ${totalMemory}`);
 console.log(`Free memory: ${freeMemory}`);
@@ -41,31 +42,31 @@ var userN = userInfo.username;
 console.log(`Home directory: ${userInfo.homedir}`)
 var homediR = userInfo.homedir;
 var shell = userInfo.shell;
-if(userInfo.shell==null){
-console.log(`Shell: ${userInfo.shell}, Windows`);
+if (userInfo.shell == null) {
+    console.log(`Shell: ${userInfo.shell}, Windows`);
 }
-else{
+else {
     console.log("Not null means its not Windows");
 }
 
 
 cpU.forEach(element => {
-   // console.log(`Name of procesor: ${element.model}`)
+    // console.log(`Name of procesor: ${element.model}`)
 
 });
 
 cpU.forEach(element => {
-   // console.log(`Speed of procesor: ${element.speed}`)
+    // console.log(`Speed of procesor: ${element.speed}`)
 
 });
 
 
 // speed of CPU
 var result = 0;
-var numberOfProcesors=0;
+var numberOfProcesors = 0;
 for (var i = 0; i < cpU.length; i++) {
     result += cpU[i].speed;
-    numberOfProcesors=cpU.length;
+    numberOfProcesors = cpU.length;
 }
 console.log("We have " + numberOfProcesors + " processors in this computer.");
 console.log("This is sum of speed of all the CPU:" + result);
@@ -78,7 +79,7 @@ cpU.forEach(element => {
     const entries = Object.entries(element);
     entries[2].forEach(element2 => {
         if (element2.user != undefined) {
-         //   console.log(`User: ${element2.user}`)
+            //   console.log(`User: ${element2.user}`)
         }
     });
 
@@ -88,11 +89,11 @@ cpU.forEach(element => {
 //console.log(cpU[0].times.user + " " + cpU[1].times.user)
 
 //function users() {
-    var User= "";
-    for (var i = 0; i < cpU.length; i++) {
-        User += cpU[i].times.user + ", ";
-    }
-    console.log("List of all the users: " + User)
+var User = "";
+for (var i = 0; i < cpU.length; i++) {
+    User += cpU[i].times.user + ", ";
+}
+console.log("List of all the users: " + User)
 //}
 
 //users();
@@ -123,38 +124,38 @@ else {
 }
 
 
-var adapter1= entries1[0][0]
-var adapter2= entries1[1][0]
-var adapter3= entries1[2][0]
-var adapter4= entries1[3][0]
+var adapter1 = entries1[0][0]
+var adapter2 = entries1[1][0]
+//var adapter3= entries1[2][0]
+//var adapter4= entries1[3][0]
 
-if(adapter1!="undefined"){
+if (adapter1 != "undefined") {
     console.log(adapter1)
 }
-else{
+else {
     console.log("There is no device like this")
 }
 
-if(adapter2!="undefined"){
+if (adapter2 != "undefined") {
     console.log(adapter2)
 }
-else{
+else {
     console.log("There is no device like this")
 }
 
-if(adapter3!="undefined"){
-    console.log(adapter3)
-}
-else{
-    console.log("There is no device like this")
-}
+// if(adapter3!="undefined"){
+//     console.log(adapter3)
+// }
+// else{
+//     console.log("There is no device like this")
+// }
 
-if(adapter4!="undefined"){
-    console.log(adapter4)
-}
-else{
-    console.log("There is no device like this")
-}
+// if(adapter4!="undefined"){
+//     console.log(adapter4)
+// }
+// else{
+//     console.log("There is no device like this")
+// }
 
 // console.log(entries1[1][0])
 // console.log(entries1[2][0])
@@ -190,6 +191,7 @@ var sigwinch = signals.SIGWINCH;
 //console.log(errors);
 
 console.log(`E2BIG: ${errors.E2BIG}`)
+e2big = errors.E2BIG;
 console.log(`EACCES: ${errors.EACCES}`)
 console.log(`EADDRINUSE: ${errors.EADDRINUSE}`)
 console.log(`EADDRNOTAVAIL: ${errors.EADDRNOTAVAIL}`)
@@ -292,38 +294,39 @@ var obj = {
     osObject,
     totalMemory,
     freeMemory,
-     platform,
-     homeDir,
-     cores,
-     reLease,
-     tempDir,
-     type,
-     upTime,
-     uid,
-     gid,
-     userN,
-     homediR,
-     shell,
-     numberOfProcesors,
-     result,
-     User,
-     sumaCpu,
-     adapterS,
-     sighup,
-     sigint,
-     sigill,
-     sigabrt,
-     sigfpe,
-     sigkill,
-     sigsegv,
-     sigterm,
-     sigbreak,
-     sigwinch,
-     adapter1,
-     adapter2,
-     adapter3,
-     adapter4,
-     
+    platform,
+    homeDir,
+    cores,
+    reLease,
+    tempDir,
+    type,
+    upTime,
+    uid,
+    gid,
+    userN,
+    homediR,
+    shell,
+    numberOfProcesors,
+    result,
+    User,
+    sumaCpu,
+    adapterS,
+    sighup,
+    sigint,
+    sigill,
+    sigabrt,
+    sigfpe,
+    sigkill,
+    sigsegv,
+    sigterm,
+    sigbreak,
+    sigwinch,
+    adapter1,
+    adapter2,
+    // adapter3,
+    //adapter4,
+    e2big,
+
 
 
 }

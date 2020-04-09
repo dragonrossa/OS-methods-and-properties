@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./script/FileSaver.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localhost</title>
+</head>
+<h1 style="padding:50px 300px; text-align:center">List of operating system-related utility methods and properties</h1>
+
+<body class="p-3 mb-2 bg-light text-dark">
+
+    <div class="container">
+        <div class="row">
+          <div class="col-sm">
+           
+          </div>
+          <div class="col-sm">
+        
+            <button type="button" class="btn btn-primary btn-lg btn-block" id="myButton2" onclick="jSon()">Generiraj Json</button>
+            <br><br>
+
+            <button type="button" class="btn btn-primary btn-lg btn-block" id="myButton1" onclick="opisRacunala()">
+                Opis računala
+                </a>
+            </button>
+            <br><br>
+            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="generirajPdf()">
+                Generiraj pdf
+        
+            </button>
+        
+            <br><br>
+            <button type="button" class="btn btn-primary btn-lg btn-block" id="myButton3" onclick="skiniPdf()">
+                Skini pdf
+        
+            </button>
+            <br><br>
+            <button type="button" class="btn btn-primary btn-lg btn-block" id="myButton4" onclick="upisiRacunalo()">
+                Upiši računalo 
+        
+            </button>
+          
+            <br><br>
+
+            <button type="button" class="btn btn-primary btn-lg btn-block" id="myButton5" onclick="ispisiRacunalo()">
+                Ispiši računalo 
+        
+            </button>
+           
+            <br><br>
+    
+          </div>
+          <div class="col-sm">
+          
+          </div>
+        </div>
+      </div>
+
+
+
+
+    
+
+</body>
+
+
+
+<script>
+    function generirajPdf() {
+        axios.post('http://localhost:3000/test')
+            .then(function (response) {
+                // handle success
+                alert("Dokument je generiran!");
+                console.log(response);
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+            .then(function () {
+                // always executed
+            });
+    }
+
+    function opisRacunala() {
+        document.getElementById("myButton1").onclick = location.href = "/opis-racunala.html";
+    }
+
+  
+
+    function upisiRacunalo() {
+        axios.get('http://localhost:3000/unos-racunala')
+            .then(function (response) {
+                document.getElementById("myButton4").onclick = location.href = "/unos-racunala";
+                
+                console.log(response);
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+            .finally(function () {
+                // always executed
+            });
+    }
+
+    function jSon() {
+        axios.get('http://localhost:3000')
+            .then(function (response) {
+                // handle success
+                document.getElementById("myButton2").onclick = location.href = "/";
+                alert("Json je generiran!");
+                console.log(response);
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+            .finally(function () {
+                // always executed
+            });
+    }
+
+ 
+    function skiniPdf() {
+        axios.get('http://localhost:3000/skini-pdf/os.pdf')
+            .then(function (response) {
+                var fileName = "./os.pdf";
+                saveAs(fileName);
+                console.log(response);
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+            .finally(function () {
+                // always executed
+            });
+    }
+
+    function ispisiRacunalo() {
+    axios.get('http://localhost:3000/ispis-racunala')
+        .then(function (response) {
+            document.getElementById("myButton5").onclick = location.href = "/ispis-racunala";
+           
+            console.log(response);
+        })
+        .catch(function (error) {
+            // handle error
+            console.log(error);
+        })
+        .finally(function () {
+            // always executed
+        });
+}
+</script>
+</script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</html>

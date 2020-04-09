@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+    <script>
+
+        $(function () {
+
+            $.getJSON('./os.json', function (data) {
+                $.each(data, function (i,f) {
+                    var tblRow = "<tr>" + "<td>" + i+ "</td>" +
+                        "<td>" + f + "</td>" + "</tr>"
+                    $(tblRow).appendTo("#userdata tbody");
+                });
+
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <h1>List of operating system-related utility methods and properties</h1>
+
+    <div class="wrapper">
+        <div class="profile">
+            <table id="userdata" border="2">
+                <thead>
+                    <th>Definition</th>
+                    <th>Value</th>
+                   
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <br>
+
+            <a href="/">Povratak</a>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+

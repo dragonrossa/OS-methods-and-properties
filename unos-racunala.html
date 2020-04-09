@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unos racunala</title>
+</head>
+
+<body class="p-3 mb-2 bg-light text-dark">
+    <h1 style="padding:50px 300px; text-align:center">List of operating system-related utility methods and properties
+    </h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+
+            </div>
+            <div class="col-sm">
+                <form id="myForm" action="/unos-racunala" method="POST">
+                    <!-- action="/" -->
+                    Naziv: <input type="text" name="fname" id="1"><br><br>
+                    Model: <input type="text" name="lname" id="2"><br><br>
+                    <input type="button" onclick="myFunction1()" value="Submit form">
+
+                   
+                </form>
+                <br>
+                <button id="myBtn">Check the form</button>
+                <br>
+               
+                <br>
+                <p><b>Naziv:</b></p>
+                <p id="demo"></p>
+                <p><b>Model:</b></p>
+                <p id="demo2"></p>
+                <br>
+                <a href="/">Povratak</a>
+        
+
+            </div>
+
+
+            <p id="test3"></p>
+          
+            <div class="col-sm">
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var p1 = 5;
+        var p2 = 7;
+
+        document.getElementById("myBtn").addEventListener("click", function () {
+            myFunction3();
+            myFunction4();
+        });
+
+        function myFunction(a, b) {
+            var result = a * b;
+            document.getElementById("demo").innerHTML = result;
+        }
+        function myFunction3() {
+            var result = document.getElementById("1").value;
+            document.getElementById("demo").innerHTML = result;
+           
+        }
+        function myFunction4() {
+            var result = document.getElementById("2").value;
+            document.getElementById("demo2").innerHTML = result;
+            
+        }
+
+    </script>
+
+    <script>
+        function test1() {
+            document.getElementById("p1").innerHTML = "Naziv:" + document.getElementById("1").value;
+        }
+        function test2() {
+            document.getElementById("p2").innerHTML = "Model" + document.getElementById("2").value;
+        }
+
+     
+    </script>
+
+
+    <script>
+
+    </script>
+
+
+
+    <script>
+        function myFunction1() {
+
+           
+            let name = document.getElementById("1").value;
+            let lastName = document.getElementById("2").value;
+            console.log(name)
+            console.log(lastName)
+
+
+            axios.post('http://localhost:3000/unos-racunala', {
+                    fname : name,
+                    lname : lastName
+            })
+                .then(function (response) {
+                    // handle success
+                    alert("Dobar unos!");
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    // handle error
+                    console.log(error);
+                })
+                .then(function () {
+                    // always executed
+                });
+
+     
+
+        }
+
+
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

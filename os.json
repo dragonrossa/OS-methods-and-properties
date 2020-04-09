@@ -1,0 +1,61 @@
+{
+  "hostname": "Rosana",
+  "totalMemory": 17109147648,
+  "freeMemory": 8819572736,
+  "platform": "win32",
+  "homeDirectory": {
+    "type": "Buffer",
+    "data": [
+      67,
+      58,
+      92,
+      85,
+      115,
+      101,
+      114,
+      115,
+      92,
+      82,
+      111,
+      115,
+      97,
+      110,
+      97
+    ]
+  },
+  "cores": 16,
+  "dateRelease": "10.0.18363",
+  "tempDir": "C:\\Users\\Rosana\\AppData\\Local\\Temp",
+  "type": "Windows_NT",
+  "uptime": 1591072,
+  "uid": -1,
+  "gid": -1,
+  "users": {
+    "type": "Buffer",
+    "data": [
+      82,
+      111,
+      115,
+      97,
+      110,
+      97
+    ]
+  },
+  "shell": null,
+  "numberOfProcessors": 16,
+  "result": 57488,
+  "user": "3363343, 503906, 3492000, 519343, 1935390, 1170625, 1738000, 878640, 1996609, 304640, 3189218, 339296, 1765468, 675984, 1505218, 838125, ",
+  "sumaCPU": "This computer has: 16x AMD Ryzen 7 1800X Eight-Core Processor         ",
+  "sighup": 1,
+  "sigint": 2,
+  "sigill": 4,
+  "sigabrt": 22,
+  "sigfpe": 8,
+  "sigkill": 9,
+  "sigsegv": 11,
+  "sigterm": 15,
+  "sigrebak": 21,
+  "sigwinch": 28,
+  "adapter1": "VirtualBox Host-Only Network",
+  "adapter2": "VMware Network Adapter VMnet1"
+}

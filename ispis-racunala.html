@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+    <script>
+
+        $(function () {
+
+            $.getJSON('./unos.json', function (data) {
+                   
+                $.each(data, function (i,f) {
+                    var tblRow = "<tr>" + "<td>" + i+ "</td>" +
+                        "<td>" + f + "</td>" + "</tr>"
+                    $(tblRow).appendTo("#userdata tbody");
+                });
+
+            });
+
+        });
+
+
+        $(function () {
+
+$.getJSON('unos.json', function (data) {
+       
+    $.each(data, function (i,f) {
+      
+
+        var tab1 = i
+        var tab2 = f;
+      $( "div#ispis" ).append();
+    });
+
+});
+
+});
+    </script>
+</head>
+<body>
+    <h1>Ispis računala</h1>
+
+
+    <div class="wrapper">
+        <div class="profile">
+            <table id="userdata" border="2">
+                <thead>
+                    <th>Definition</th>
+                    <th>Value</th>
+                   
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <br>
+
+            <a href="/">Povratak</a>
+
+        </div>
+    </div>
+
+
+</body>
+</html>
