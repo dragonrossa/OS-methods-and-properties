@@ -2,13 +2,15 @@
 Properties and methods of some computer, made in NodeJS
 
 
-NodeJS
-Browserify
-Beefy
+
 AJAX - Json Jquery
-Html
-CSS
-Javascript
-Express
+Html5 - POST/GET
+Bootstrap, CSS
 Cors
-Axios
+NodeJS
+Javascript
+ExpressJS
+AxiosJS
+PDFkit
+FileSaver
+and other Node modules
