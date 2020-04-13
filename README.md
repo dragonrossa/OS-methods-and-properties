@@ -24,3 +24,7 @@ PDFkit
 FileSaver
 
 and other Node modules
+
+Check snapshot folder for visual graphics.
+
+Rosana
